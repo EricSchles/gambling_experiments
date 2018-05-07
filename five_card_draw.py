@@ -176,8 +176,9 @@ def experiment_one(num_players, num_iterations):
         win_proportion[player] = experiments.count(player) / len(experiments)
     return win_proportion
 
-result_5p_1000 = experiment_one(5, 1000)
-result_5p_10000 = experiment_one(5, 10000)
-result_5p_100000 = experiment_one(5, 100000)
-IPython.embed()
+for i in range(2, 5):
+    print("For ", i, "players at", 1000, "experiments, the results were", experiment_one(i, 1000))
+    print("For ", i, "players at", 10000, "experiments, the results were", experiment_one(i, 10000))
+    print("For ", i, "players at", 100000, "experiments, the results were", experiment_one(i, 100000))
+
         
